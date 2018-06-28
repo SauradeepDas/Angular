@@ -1,0 +1,13 @@
+<a routerLink="/">BACK</a>
+
+
+<h2>
+  UPDATE PRODUCT 
+</h2>
+<h3 *ngIf="!exists">PRODUCT DOESNOT EXIST</h3>
+<form id="formNewProduct" name="formNewProduct" #productData="ngForm" (ngSubmit)="updateProduct(productData.value)">
+  <label>NAME:   </label> <input type="text" id="name" placeholder="name" [(ngModel)]="data.name" name="name" ngModel><br>
+  <label>COLOR: </label> <input type="text" id="color" placeholder="color" [(ngModel)]="data.color" name="color" ngModel><br>
+  <input type="submit" value="UPDATE PRODUCT">
+</form>
+<br>
